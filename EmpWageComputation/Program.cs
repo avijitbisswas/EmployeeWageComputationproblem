@@ -8,44 +8,54 @@ namespace EmpWageComputation
 {
     public class Program
     {
+        const int EMP_PRESENT = 0, EMP_ABSENT = 1, PAY_PER_HOUR = 20, FULL_WORK_HOUR = 8, PART_TIME_WORK = 4;
+        
         public static void Main()
         {
-            const int EMP_PRESENT = 0, EMP_ABSENT = 1, PAY_PER_HOUR = 20, FULL_WORK_HOUR = 8 , PART_TIME_WORK=4;
+            
             Console.WriteLine("Employement Wage Computation Program");
             Console.ReadLine();
             Random random = new Random();
-            int empcheck = random.Next(0,2);
-            if (empcheck == 0) 
+            int empcheck = random.Next(0,3);
+            switch (empcheck)
             {
-                Random random2 = new Random();
-                int work = random2.Next(0, 2);
-                if (work==0) //full day work taking random as 0
-                {
-
-                    Console.WriteLine("Employee is present");
-                    Console.WriteLine("Daily Wage of the employee is " + PAY_PER_HOUR * FULL_WORK_HOUR);
+                case 1:
+                    empcheck = FULL_WORK_HOUR;
+                    Console.WriteLine("Employee is Preent");
+                    Console.WriteLine("Daily wage of the employee is " + PAY_PER_HOUR * FULL_WORK_HOUR);
                     Console.ReadLine();
-                }
-                else 
-                {
-                    Console.WriteLine("Employee is present half day");
-                    Console.WriteLine("Part Time Wage of Employee is" +PAY_PER_HOUR*PART_TIME_WORK);
-                }
-            }
-            else 
-            {
-                Console.WriteLine("Employee is absent");
-                Console.ReadLine();
-            }
+                    break;
 
-        
-           
+                case 2:
+                    empcheck = PART_TIME_WORK;
+                    Console.WriteLine("Employee is present but Half Day");
+                    Console.WriteLine("Part Time Wage of employee is " + PART_TIME_WORK * PAY_PER_HOUR);
+                    Console.ReadLine();
+                    break;
+                default: Console.WriteLine("Employee is Absent.");
+                    empcheck = 0;
+                    break;
+            }
+            
+
+
 
 
 
 
 
         }
+
+        
+
+
+
+
+
+
+
+
+        
 
     }
 }
