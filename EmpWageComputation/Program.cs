@@ -12,7 +12,7 @@ namespace EmpWageComputation
         
         public static void Main()
         {
-            
+            int workhour = 100;
             Console.WriteLine("Employement Wage Computation Program");
             Console.ReadLine();
             Random random = new Random();
@@ -21,23 +21,24 @@ namespace EmpWageComputation
             {
                 case 1:
                     empcheck = FULL_WORK_HOUR;
-                    Console.WriteLine("Employee is Preent");
-                    Console.WriteLine("Monthly Wage of the employee(full-time) is " + PAY_PER_HOUR * FULL_WORK_HOUR*20);
+                    Console.WriteLine("Employee is Present");
+                    Console.WriteLine("Monthly Wage of the employee(full-time) is " + PAY_PER_HOUR * FULL_WORK_HOUR * 20);
                     Console.ReadLine();
+                    
                     break;
 
                 case 2:
                     empcheck = PART_TIME_WORK;
                     Console.WriteLine("Employee is present but Half Day");
-                    Console.WriteLine("Monthly Wage of employee(part-time) is " + PART_TIME_WORK * PAY_PER_HOUR*20);
-                    Console.ReadLine();
+                    Console.WriteLine("Work Our is less than 100hors");
+                        Console.ReadLine();
                     break;
-                default: Console.WriteLine("Employee is Absent.");
+                default: Console.WriteLine("Employee is Absent."); 
                     Console.ReadLine() ;
                     empcheck = 0;
                     break;
             }
-           return;
+            return;
 
 
 
