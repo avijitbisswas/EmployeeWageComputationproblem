@@ -33,10 +33,11 @@ namespace EmpWageComputation
                     Console.ReadLine();
                     break;
                 default: Console.WriteLine("Employee is Absent.");
+                    Console.ReadLine() ;
                     empcheck = 0;
                     break;
             }
-            
+           return;
 
 
 
