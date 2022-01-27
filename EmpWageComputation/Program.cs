@@ -6,13 +6,27 @@ using System.Threading.Tasks;
 
 namespace EmpWageComputation
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("EMPLOYEE WAGE COMPUTATION");
-            Console.ReadLine();
+            const int EMP_PRESENT = 0, EMP_ABSENT = 1;
+            Random random = new Random();
+            int empcheck = random.Next(0, 2);
+            if (empcheck == 0)
+            {
+                Console.WriteLine("Employee is Preent");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Employe is absent");
+                Console.ReadLine();
+                
+            }
+            return;
+           
         }
+                
     }
 }
