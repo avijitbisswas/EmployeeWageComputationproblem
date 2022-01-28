@@ -38,7 +38,10 @@ namespace EmpWageComputation
                     empcheck = 0;
                     break;
             }
-            return;
+            
+            workfilter workfilter = new workfilter();
+            workfilter.HoursFilter();
+            Console.ReadLine();
 
 
 
